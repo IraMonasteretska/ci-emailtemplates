@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email 3</title>
+
+    <style>
+        @font-face {
+            font-family: Avenir-Medium;
+            src: url(fonts/Avenir-Medium.ttf)
+        }
+
+        @font-face {
+            font-family: Avenir book;
+            src: url(fonts/Avenir-Book.ttf)
+        }
+
+        @font-face {
+            font-family: Avenir heavy;
+            src: url(fonts/Avenir-Heavy.ttf)
+        }
+
+        body {
+            margin: 0;
+            background-color: #e3e3e3;
+        }
+
+        table {
+            max-width: 600px;
+            background-color: #fff;
+            width: 100%;
+            margin: 0 auto;
+            font-family: Avenir book;
+            font-size: 15px;
+            line-height: 20px;
+            color: rgba(0, 0, 0, 0.85);
+        }
+
+        p {
+            margin: 0 0 10px 0;
+        }
+
+        .personalblock {
+            box-shadow: 0px 1px 10px rgba(118, 118, 118, 0.2);
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 34px;
+        }
+
+        .personalblock__left {
+            padding: 20px 25px;
+            position: relative;
+            float: left;
+            width: 150px;
+            box-sizing: border-box;
+            min-height: 150px;
+        }
+
+        .greenbg {
+            height: 100%;
+            width: 60px;
+            background: #279FA3;
+            display: inline-block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+        }
+
+        .personalblock__left img {
+            border-radius: 50%;
+            position: relative;
+            z-index: 2;
+            max-width: 100px;
+            width: 100%;
+        }
+
+        .personalblock__right {
+            width: 70%;
+            padding: 14px 0 12px;
+            position: relative;
+            width: calc(100% - 150px);
+            box-sizing: border-box;
+            float: left;
+            min-height: 150px;
+        }
+
+        .personalblock__right a {
+            display: block;
+            color: #515151;
+            font-size: 12px;
+            line-height: 16px;
+            text-decoration: none;
+            margin-bottom: 5px;
+        }
+
+        .personalblock__right a.orangelink {
+            color: #FF6200;
+            text-decoration: none;
+            font-style: italic;
+            text-decoration: underline;
+        }
+
+        .personalblock__right a img {
+            margin: -3px 5px 0 0;
+            vertical-align: middle;
+        }
+
+        .grenline {
+            height: 100%;
+            width: 9px;
+            background: #FF6200;
+            display: inline-block;
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 1;
+        }
+
+        .aboutci .title {
+            font-size: 21px;
+            line-height: 26px;
+            color: rgba(0, 0, 0, 0.85);
+            font-family: Avenir heavy;
+            margin-bottom: 9px;
+        }
+
+        .aboutci .subtitle {
+            margin-bottom: 20px;
+            color: rgba(0, 0, 0, 0.85);
+            font-size: 16px;
+            line-height: 22px;
+            font-family: Avenir-Medium;
+        }
+
+        .aboutci p {
+            color: rgba(0, 0, 0, 0.85);
+        }
+
+        .listtitle {
+            margin-bottom: 6px;
+            font-family: Avenir-Medium;
+            color: rgba(0, 0, 0, 0.85);
+        }
+
+        .arealist ul {
+            margin: 0;
+            padding-left: 20px;
+            width: 32%;
+            font-size: 15px;
+            line-height: 20px;
+            color: rgba(0, 0, 0, 0.85);
+            width: 31%;
+            display: inline-block;
+            box-sizing: border-box;
+        }
+
+        .videoimg {
+            display: inline-block;
+            width: 49%;
+            vertical-align: top;
+        }
+
+        .videoimg img {
+            max-width: 100%;
+        }
+
+        .brandswrap {
+            width: 49%;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .brands {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: block;
+            margin: 0 auto;
+            max-width: 200px;
+        }
+
+        .brands li {
+            display: inline-block;
+            margin-right: 16px;
+            vertical-align: top;
+        }
+
+        .footerblock {
+            padding: 27px 49px 14px;
+            background: #353535;
+        }
+
+        .footerlogo {
+            display: block;
+            width: 73px;
+            margin: 0 auto 8px;
+        }
+
+        .footermenu {
+            list-style-type: none;
+            text-align: center;
+            margin-bottom: 18px;
+        }
+
+        .footermenu li {
+            display: inline-block;
+            color: #C3C3C3;
+            vertical-align: middle;
+        }
+
+        .footermenu li a {
+            text-decoration: none;
+            font-size: 12px;
+            line-height: 16px;
+            color: #C3C3C3;
+            margin-right: 6px;
+            margin-left: 2px;
+        }
+
+        .footsoc {
+            margin: 0 0 18px 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .footsoc li {
+            display: inline-block;
+            margin: 0 18px;
+        }
+
+        .footerblock p {
+            text-align: center;
+            color: #C3C3C3;
+            font-size: 14px;
+            line-height: 19px;
+            margin: 0;
+            letter-spacing: -0.1px;
+        }
+
+
+        @media (max-width:605px) {
+            .arealist ul {
+                width: 100% !important;
+            }
+        }
+
+        @media (max-width:480.8px) {
+            .mailheader th {
+                padding-left: 15px !important;
+                padding-right: 15px !important;
+            }
+
+            tbody tr td {
+                padding-left: 15px !important;
+                padding-right: 15px !important;
+            }
+
+            .personalblock__left,
+            .personalblock__right {
+                min-height: 160px;
+            }
+
+            .videoimg {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .videoimg img {
+                width: 100%;
+            }
+
+            .brandswrap {
+                width: 100%;
+            }
+
+            td.footer {
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+            }
+
+            .footerblock {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+
+            .footsoc li {
+                margin: 0 10px;
+            }
+
+            .personalblock__right {
+                padding-right: 10px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <table style="border-collapse: collapse">
+        <thead class="mailheader">
+            <tr colspan="2">
+                <th style="padding: 28px 49px 30px 49px; text-align: left;"><img src="img/logo.svg" alt="logo"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td colspan="2" style="padding: 0 49px 24px 49px;">
+                    <p>
+                        Dear Joyce,
+                    </p>
+                    <p>
+                        It was a pleasure speaking with you. Please find this email as a confirmation for your needs
+                        assessment scheduled through Zoom Conference. The meeting information is as follows:
+                    </p>
+
+                    <p style="margin-bottom: 24px; line-height: 24px;">
+                        <span style="font-family: Avenir-Medium;">Start Time:</span>
+                        11/4/2022 1:00 PM<br>
+                        <span style="font-family: Avenir-Medium;">End Time:</span>
+                        11/4/2022 1:30 PM<br>
+                        <span style="font-family: Avenir-Medium;">Zoom Link:</span>
+                        <a target="_blank" style="color: #C1420B;"
+                            href="https://careindeed.zoom.us/j/86820997401?pwd=eHduT1hXOGp2OHNDRERMbVFpZ21Qdz09">https://careindeed.zoom.us/j/86820997401?pwd=eHduT1hXOGp2OHNDRERMbVFpZ21Qdz09</a><br>
+                        <span style="font-family: Avenir-Medium;">Meeting Passcode:</span>
+                        586772
+                    </p>
+
+                    <p>
+                        Here is a link to the instruction guide on <a href="#" target="_blank"
+                            style="color: #C1420B;">how to navigate the Zoom platform</a>. I have also
+                        included our intake form and our <a href="#" target="_blank" style="color: #C1420B;">Welcome
+                            Packet</a> for your review. To maximize our time together,
+                        we encourage you to fill out this form electronically in advance by clicking on this <a href="#"
+                            style="color: #C1420B;">link</a>.
+                    </p>
+
+                    <p>
+                        Please do not hesitate to contact us if you have any questions or need to update your
+                        availability.   
+                    </p>
+
+                    <p>
+                        We look forward to meeting with you! Have a great day.
+                    </p>
+
+                    <p>
+                        Sincerely,
+                    </p>
+                    
+                    <p>
+                        Care Indeed, Inc.<br>
+                        <a style="color: #C1420B" href="mailto:www.careindeed.com">www.careindeed.com</a><br>
+                        Direct/SMS: +1 6502424517<br>
+                        24/7 Toll free: 8775043822<br>
+                        Fax: 8884017847
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="padding: 0 49px;">
+                    <div class="personalblock">
+                        <div class="personalblock__left">
+                            <span class="greenbg"></span>
+                            <img src="img/user.png" alt="user">
+                        </div>
+
+                        <div class="personalblock__right">
+                            <p style="margin-bottom: 2px; font-family: Avenir heavy; color: #000000;">FULL NAME</p>
+                            <p style="margin-bottom: 13px; color: #8E8E93; font-size: 12px;
+                            line-height: 16px;">JOB TITLE</p>
+                            <a href="tel:6503889981">
+                                <img src="img/tel.png" alt="icon">
+                                (650) 388-9981
+                            </a>
+                            <a href="mailto:test@careindeed.com">
+                                <img src="img/email.png" alt="icon">
+                                test@careindeed.com
+                            </a>
+                            <a href="#" class="orangelink">
+                                <img src="img/calendar.png" alt="icon">
+                                Schedule a meeting with me today
+                            </a>
+                            <span class="grenline"></span>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        
+            <tr>
+                <td colspan="2" style="padding: 0 15px 0 49px;">
+                    <a class="videoimg" href="#" target="_blank">
+                        <img src="img/videoimg.png" alt="video">
+                    </a>
+                    <div class="brandswrap">
+                        <ul class="brands">
+                            <li><img src="img/img1.png" alt="img"></li>
+                            <li><img src="img/img2.png" alt="img"></li>
+                            <li><img src="img/img3.png" alt="img"></li>
+                            <li><img src="img/img4.png" alt="img"></li>
+                        </ul>
+                    </div>
+                </td>
+
+            </tr>
+            <tr>
+                <td class="footer" colspan="2" style="padding-top: 60px;">
+                    <div class="footerblock">
+                        <a href="#" class="footerlogo"><img src="img/logo-footer.svg" alt="logo"></a>
+                        <ul class="footermenu">
+                            <li><a href="#" target="_blank">Homecare</a>|</li>
+                            <li><a href="#" target="_blank">Home Health</a>|</li>
+                            <li><a href="#" target="_blank">Health Care Staffing</a></li>
+                        </ul>
+                        <ul class="footsoc">
+                            <li><a href="#" target="_blank"><img src="img/soc1.png" alt="facebook"></a></li>
+                            <li><a href="#" target="_blank"><img src="img/soc2.png" alt="twitter"></a></li>
+                            <li><a href="#" target="_blank"><img src="img/soc3.png" alt="instagram"></a></li>
+                            <li><a href="#" target="_blank"><img src="img/soc4.png" alt="youtube"></a></li>
+                            <li><a href="#" target="_blank"><img src="img/soc5.png" alt="pinterest"></a></li>
+                            <li><a href="#" target="_blank"><img src="img/soc6.png" alt="linkedin"></a></li>
+                        </ul>
+                        <p>
+                            This email was sent by: Care Indeed, Inc.<br>
+                            419 East Hamilton Avenue Campbell, CA, 95008, USA
+                        </p>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+
+</html>

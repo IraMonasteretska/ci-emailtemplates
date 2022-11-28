@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email 2</title>
+
+    <style>
+        @font-face {
+            font-family: Avenir-Medium;
+            src: url(fonts/Avenir-Medium.ttf)
+        }
+
+        @font-face {
+            font-family: Avenir book;
+            src: url(fonts/Avenir-Book.ttf)
+        }
+
+        @font-face {
+            font-family: Avenir heavy;
+            src: url(fonts/Avenir-Heavy.ttf)
+        }
+
+        body {
+            margin: 0;
+            background-color: #e3e3e3;
+        }
+
+        table {
+            max-width: 600px;
+            background-color: #fff;
+            width: 100%;
+            margin: 0 auto;
+            /* border: 1px solid; */
+            font-family: Avenir book;
+            font-size: 15px;
+            line-height: 20px;
+            color: rgba(0, 0, 0, 0.85);
+        }
+
+        p {
+            margin: 0 0 10px 0;
+        }
+
+
+
+        .greenbg {
+            height: 100%;
+            width: 60px;
+            background: #279FA3;
+            display: inline-block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+        }
+
+        .grenline {
+            height: 100%;
+            width: 9px;
+            background: #FF6200;
+            display: inline-block;
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 1;
+        }
+
+        .aboutci .title {
+            font-size: 21px;
+            line-height: 26px;
+            color: rgba(0, 0, 0, 0.85);
+            font-family: Avenir heavy;
+            margin-bottom: 9px;
+        }
+
+        .aboutci .subtitle {
+            margin-bottom: 20px;
+            color: rgba(0, 0, 0, 0.85);
+            font-size: 16px;
+            line-height: 22px;
+            font-family: Avenir-Medium;
+        }
+
+        .aboutci p {
+            color: rgba(0, 0, 0, 0.85);
+        }
+
+        .listtitle {
+            margin-bottom: 6px;
+            font-family: Avenir-Medium;
+            color: rgba(0, 0, 0, 0.85);
+        }
+        .arealist {
+            margin-bottom: 20px;
+        }
+        .arealist ul {
+            margin: 0;
+            padding-left: 20px;
+            width: 32%;
+            font-size: 15px;
+            line-height: 20px;
+            color: rgba(0, 0, 0, 0.85);
+            width: 31%;
+            display: inline-block;
+            box-sizing: border-box;
+        }
+
+        .videoimg {
+            display: inline-block;
+            width: 49%;
+            vertical-align: top;
+        }
+
+        .videoimg img {
+            max-width: 100%;
+        }
+
+        .brandswrap {
+            width: 49%;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .brands {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: block;
+            margin: 0 auto;
+            max-width: 200px;
+        }
+
+        .brands li {
+            display: inline-block;
+            margin-right: 16px;
+            vertical-align: top;
+        }
+
+        .footerblock {
+            padding: 27px 49px 14px;
+            background: #353535;
+        }
+
+        .footerlogo {
+            display: block;
+            width: 73px;
+            margin: 0 auto 8px;
+        }
+
+        .footermenu {
+            list-style-type: none;
+            text-align: center;
+            margin-bottom: 18px;
+        }
+
+        .footermenu li {
+            display: inline-block;
+            color: #C3C3C3;
+            vertical-align: middle;
+        }
+
+        .footermenu li a {
+            text-decoration: none;
+            font-size: 12px;
+            line-height: 16px;
+            color: #C3C3C3;
+            margin-right: 6px;
+            margin-left: 2px;
+        }
+
+        .footsoc {
+            margin: 0 0 18px 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .footsoc li {
+            display: inline-block;
+            margin: 0 18px;
+        }
+
+        .footerblock p {
+            text-align: center;
+            color: #C3C3C3;
+            font-size: 14px;
+            line-height: 19px;
+            margin: 0;
+            letter-spacing: -0.1px;
+        }
+
+
+        @media (max-width:605px) {
+            .arealist ul {
+                width: 100% !important;
+            }
+        }
+
+        @media (max-width:480.8px) {
+            .mailheader th {
+                padding-left: 15px !important;
+                padding-right: 15px !important;
+            }
+
+            tbody tr td {
+                padding-left: 15px !important;
+                padding-right: 15px !important;
+            }
+
+            .videoimg {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .videoimg img {
+                width: 100%;
+            }
+
+            .brandswrap {
+                width: 100%;
+            }
+
+            td.footer {
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+            }
+
+            .footerblock {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+
+            .footsoc li {
+                margin: 0 10px;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <table style="border-collapse: collapse">
+        <thead class="mailheader">
+            <tr colspan="2">
+                <th style="padding: 28px 49px 30px 49px; text-align: left;"><img src="img/logo.svg" alt="logo"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td colspan="2" style="padding: 0 49px 24px 49px;">
+                    <p>
+                        Dear Andrea,
+                    </p>
+                    <p>
+                        It was a pleasure to speak with you. Please find this email as a confirmation for your needs
+                        assessment scheduled on 11/7/2022 2:00 PM at The Vi IL - 305 E , Palo Alto, CA 94304.
+                    </p>
+                    <p>
+                        Attached is a copy of our intake form and our <a href="#" style="color: #C1420B">Welcome
+                            Packet</a> for your review. If you wish, you
+                        may fill out the form electronically in advance by clicking on this <a href="#"
+                            style="color: #C1420B">link</a>.
+                    </p>
+                    <p>
+                        Please do not hesitate to contact us if you have any questions or need to update your
+                        availability.
+                    </p>
+                    <p>
+                        We look forward to meeting with you and enjoy the rest of your day.
+                    </p>
+                    <p>
+                        Sincerely,<br>
+                        Assessors Team
+                    </p>
+                    <p>
+                        Care Indeed, Inc.<br>
+                        <a style="color: #C1420B" href="mailto:www.careindeed.com">www.careindeed.com</a><br>
+                        Direct/SMS: +1 6502424517<br>
+                        24/7 Toll free: 8775043822<br>
+                        Fax: 8884017847
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="aboutci" style="padding: 10px 49px">
+                    <p class="title">About Care Indeed</p>
+                    <p class="subtitle">We Are Changing Home Care Through Kindness</p>
+                    <p style="margin-bottom: 20px;">
+                        How we treat each other matters more than anything. At Care Indeed, kindness is a workplace
+                        policy. Kindness is having a deep understanding of what our clients need: to be cared for with
+                        love and compassion. Kindness is knowing what our caregivers want: a workplace where they can
+                        continue to grow and be treated like family. This is how we make a difference, one client at a
+                        time, one caregiver at a time.
+                    </p>
+                    <p class="listtitle">
+                        Service Area - Northern California
+                    </p>
+                    <div class="arealist">
+                        <ul style="width: 40%;">
+                            <li>Campbell</li>
+                            <li>East Bay - Walnut Creek</li>
+                        </ul>
+                        <ul style="width: 29%;">
+                            <li>Menlo Park</li>
+                            <li>Palo Alto</li>
+                        </ul>
+                        <ul style="width: 29%;">
+                            <li>San Francisco</li>
+                            <li>San Mateo</li>
+                        </ul>
+                    </div>
+                    <p class="listtitle">
+                        Service Area - Washington
+                    </p>
+                    <div class="arealist">
+                        <ul style="width: 40%;">
+                            <li>Seattle</li>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="padding: 0 15px 0 49px;">
+                    <a class="videoimg" href="#" target="_blank">
+                        <img src="img/videoimg.png" alt="video">
+                    </a>
+                    <div class="brandswrap">
+                        <ul class="brands">
+                            <li><img src="img/img1.png" alt="img"></li>
+                            <li><img src="img/img2.png" alt="img"></li>
+                            <li><img src="img/img3.png" alt="img"></li>
+                            <li><img src="img/img4.png" alt="img"></li>
+                        </ul>
+                    </div>
+                </td>
+
+            </tr>
+            <tr>
+                <td class="footer" colspan="2" style="padding-top: 60px;">
+                    <div class="footerblock">
+                        <a href="#" class="footerlogo"><img src="img/logo-footer.svg" alt="logo"></a>
+                        <ul class="footermenu">
+                            <li><a href="#" target="_blank">Homecare</a>|</li>
+                            <li><a href="#" target="_blank">Home Health</a>|</li>
+                            <li><a href="#" target="_blank">Health Care Staffing</a></li>
+                        </ul>
+                        <ul class="footsoc">
+                            <li><a href="#" target="_blank"><img src="img/soc1.png" alt="facebook"></a></li>
+                            <li><a href="#" target="_blank"><img src="img/soc2.png" alt="twitter"></a></li>
+                            <li><a href="#" target="_blank"><img src="img/soc3.png" alt="instagram"></a></li>
+                            <li><a href="#" target="_blank"><img src="img/soc4.png" alt="youtube"></a></li>
+                            <li><a href="#" target="_blank"><img src="img/soc5.png" alt="pinterest"></a></li>
+                            <li><a href="#" target="_blank"><img src="img/soc6.png" alt="linkedin"></a></li>
+                        </ul>
+                        <p>
+                            This email was sent by: Care Indeed, Inc.<br>
+                            419 East Hamilton Avenue Campbell, CA, 95008, USA
+                        </p>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+
+</html>
